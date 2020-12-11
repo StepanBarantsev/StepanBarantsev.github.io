@@ -5,6 +5,9 @@
 	<div class="post-date" style="margin-top:20px">
 		Published on {{ page.date | date: date_format }}
 	</div>
+	{%- if site.texture.social_links.rss -%}
+		<a class="btn btn-rss" href="/feed.xml" target="_blank">RSS</a>
+	{%- endif -%}
 	<ul class="post-tags">
 		{%- for tag in page.categories -%}
 			<li>{{ tag }}</li>
